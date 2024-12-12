@@ -24,8 +24,9 @@ def main() -> None:
         elif not jump_to.isdigit() and not jump_to == "":
             print("Invalid input")
         else:
-            if iterations > max(len(string)):
+            if iterations > len(answer_dict):
                 print("No more answers")
+                run = False
             else:
                 print(f"{iterations}: {answer_dict[iterations]}")
                 iterations += 1
