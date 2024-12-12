@@ -4,7 +4,6 @@ from math import atan
 
 
 def get_monitor_size() -> int or float:
-    """Gets Monitor size"""
     while True:
         monitor_size1 = input("What is your monitor's size?: ")
         try:
@@ -31,7 +30,7 @@ def get_monitor_resolution() -> tuple[int, int]:
                         "integers. Try again."
                     )
             else:
-                print("Incorrect formatting, please enter two numbers." "Try again.")
+                print("Incorrect formatting, please enter two numbers. Try again")
         else:
             print("Incorrect formatting, input must include '*' (x*y)." "Try again.")
 

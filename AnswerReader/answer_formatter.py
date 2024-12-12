@@ -1,8 +1,4 @@
-"""Takes a string and formats in to answers"""
-
-
 def answer_format(string="ABCD ABCD") -> str:
-    """Format"""
     string = string.replace(" ", "")
     output = ""
     iterations = 0
@@ -14,7 +10,7 @@ def answer_format(string="ABCD ABCD") -> str:
 
 
 def main() -> None:
-    user_string = input("Please enter a string of answers Ex: ABCD ABD:\n")
+    user_string = input("Please enter a string answers Ex: ABCD ABD:\n")
     print(answer_format(user_string))
 
 

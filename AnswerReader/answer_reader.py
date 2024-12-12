@@ -1,6 +1,3 @@
-"""Takes Answers and cycles through them one by one"""
-
-
 def main() -> None:
     """Main"""
     answer_dict: dict[int, str] = {}
