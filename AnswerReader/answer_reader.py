@@ -1,5 +1,4 @@
 def main() -> None:
-    """Main"""
     answer_dict: dict[int, str] = {}
     run: bool = True
     string = input("Enter a list of answers:\n")
@@ -7,10 +6,9 @@ def main() -> None:
     for letter in string:
         iterations += 1
         answer_dict[iterations] = letter
-    iterations = 1
-
+    iterations = 0
     while run:
-        jump_to: int = input(
+        jump_to: str = input(
             "Enter a number to jump to or press enter for next answer: "
         )
         if jump_to.isdigit():

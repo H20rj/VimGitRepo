@@ -7,6 +7,7 @@ def main() -> None:
     """Main"""
     number = randint(1, 25)
     counter = 0
+    user_input: int = 0
     try:
         user_input = int(input("Enter a number 1-25: "))
     except ValueError:

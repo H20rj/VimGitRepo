@@ -3,7 +3,7 @@
 from math import atan
 
 
-def get_monitor_size() -> int or float:
+def get_monitor_size():
     while True:
         monitor_size1 = input("What is your monitor's size?: ")
         try:

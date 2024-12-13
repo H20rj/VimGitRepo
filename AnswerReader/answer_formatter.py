@@ -1,5 +1,5 @@
 def answer_format(string="ABCD ABCD") -> str:
-    string = string.replace(" ", "")
+    string = string.replace(" ", "").upper()
     output = ""
     iterations = 0
     for letter in string:
@@ -11,6 +11,7 @@ def answer_format(string="ABCD ABCD") -> str:
 
 def main() -> None:
     user_string = input("Please enter a string answers Ex: ABCD ABD:\n")
+    # user_string = "ACDD SDWA"
     print(answer_format(user_string))
 
 
