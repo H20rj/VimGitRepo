@@ -2,7 +2,7 @@
 from typing import Dict
 
 
-def view_status() -> Dict[str, str]:
+def load_status() -> Dict[str, str]:
     db_dict: Dict[str, str] = {}
     with open("saves/status.txt", "r") as f:
         lines = f.readlines()
@@ -13,7 +13,7 @@ def view_status() -> Dict[str, str]:
 
 
 def change_status() -> None:
-    db_dict = view_status()
+    db_dict = load_status()
     print("What school would you like to change?:")
     print("    1. OU")
     print("    2. CSU")
@@ -69,5 +69,10 @@ def change_status() -> None:
     save_status()
 
 
-if __name__ == "__main__":
-    change_status()
+def view_status():
+    db_dict = load_status()
+    iterations = 0
+    db_dict_keys: list[str] = list(db_dict.keys())
+    for i in db_dict:
+        print(f"{db_dict_keys[iterations]}: {db_dict[i]}")
+        iterations += 1
