@@ -58,7 +58,7 @@ def change_status() -> None:
         new_status = "Pending"
     db_dict[school] = new_status
 
-    def save_status():
+    def save_status() -> None:
         iterations = 0
         db_dict_keys: list[str] = list(db_dict.keys())
         with open("saves/status.txt", "w") as f:
@@ -69,7 +69,7 @@ def change_status() -> None:
     save_status()
 
 
-def view_status():
+def view_status() -> None:
     db_dict = load_status()
     iterations = 0
     db_dict_keys: list[str] = list(db_dict.keys())
