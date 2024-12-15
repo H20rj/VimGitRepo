@@ -7,6 +7,8 @@ def main() -> None:
         iterations += 1
         answer_dict[iterations] = letter
     iterations = 1
+
+
     while run:
         jump_to: str = input(
             "Enter a number to jump to or press enter for next answer: "
