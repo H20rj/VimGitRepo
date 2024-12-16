@@ -1,10 +1,12 @@
 # from os.path import exists
+import os
 from typing import Dict
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATUS_FILE = os.path.join(BASE_DIR, 'saves', 'status.txt')
 
 def load_status() -> Dict[str, str]:
     db_dict: Dict[str, str] = {}
-    with open("saves/status.txt", "r") as f:
+    with open(STATUS_FILE, "r") as f:
         lines = f.readlines()
         for line in lines:
             split_status = line.split(":")
@@ -61,7 +63,7 @@ def change_status() -> None:
     def save_status() -> None:
         iterations = 0
         db_dict_keys: list[str] = list(db_dict.keys())
-        with open("saves/status.txt", "w") as f:
+        with open(STATUS_FILE, "w") as f:
             for i in db_dict:
                 f.write(f"{db_dict_keys[iterations]}: {db_dict[i]}\n")
                 iterations += 1
