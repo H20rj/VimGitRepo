@@ -3,5 +3,5 @@ CSU: Accepted
 CU: Pending
 Texas Tech: Accepted
 Trinity: Accepted
-Mines: Pending
-DU: Pending
+Mines: Denied
+DU: Accepted

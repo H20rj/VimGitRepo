@@ -1,8 +1,10 @@
 # from os.path import exists
 import os
 from typing import Dict
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATUS_FILE = os.path.join(BASE_DIR, 'saves', 'status.txt')
+STATUS_FILE = os.path.join(BASE_DIR, "saves", "status.txt")
+
 
 def load_status() -> Dict[str, str]:
     db_dict: Dict[str, str] = {}
