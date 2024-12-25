@@ -1,4 +1,3 @@
-from colorama import Fore
 
 
 def answer_format(string="ABCD ABCD") -> str:
@@ -7,7 +6,7 @@ def answer_format(string="ABCD ABCD") -> str:
     iterations = 0
     for letter in string:
         iterations += 1
-        temp_put = f"{iterations}: {Fore.GREEN + letter + Fore.WHITE}\n"
+        temp_put = f"{iterations}: {letter}\n"
         output = output + temp_put
     return output
 
